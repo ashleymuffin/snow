@@ -5,13 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-@media (max-width: 768px) {
-  .container {
-      flex-direction: column; /* Stack items on top of each other on smaller screens */
-  }
-}
-
 body {
   background: #f6704b;
 }
@@ -365,42 +358,17 @@ top: 0px;
   width: 100%;
 }
 
-.accordion-div, .text-beside-accordion-div {
+.accordion-div, .text-beside-accordion-div{
   max-width: 600px;
   display: inline-block;
-  height: auto;
+  height: 600px;
   max-height: 600px;
   overflow: hidden;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .accordion-div, .text-beside-accordion-div {
-    display: block;
-    width: 100%; /* Reset width for stacked layout on smaller screens */
-    max-width: none; /* Remove max-width for full width on smaller screens */
-    height: auto; /* Allow content to determine height */
-  }
+  width:100%;
 }
 
 .container {
   display: flex;
   flex-direction: row; /* Horizontal alignment by default */
   justify-content: space-between;
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.grid__item {
-  width: 22%; /* Adjust as needed, leaving some space between items */
-}
-
-@media (max-width: 768px) {
-  .grid__item {
-      width: 100%; /* Full width on smaller screens */
-  }
 }
