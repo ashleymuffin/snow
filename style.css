@@ -5,6 +5,13 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Stack items on top of each other on smaller screens */
+  }
+}
+
 body {
   background: #f6704b;
 }
@@ -13,9 +20,9 @@ body {
   padding: 0;
 }
 .accordion {
-  margin-top: 0px;
+  margin: 0 auto;
   position: relative;
-
+  width:100%;
   right: 0;
   margin-right:0;
   width: 600px;
@@ -24,6 +31,7 @@ body {
   cursor: pointer;
   display: inline-block;
   height: auto;
+  
 }
 .accordion .item {
   height: 100px;
