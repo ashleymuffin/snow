@@ -380,3 +380,19 @@ top: 0px;
   flex-direction: row; /* Horizontal alignment by default */
   justify-content: space-between;
 }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.grid__item {
+  width: 22%; /* Adjust as needed, leaving some space between items */
+}
+
+@media (max-width: 768px) {
+  .grid__item {
+      width: 100%; /* Full width on smaller screens */
+  }
+}
