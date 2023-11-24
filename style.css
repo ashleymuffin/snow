@@ -1,0 +1,367 @@
+@font-face {
+  font-family: "JF Flat Regular";
+  src: url('https://f9ir.github.io/acc/acc/font/JF-Flat-regular.eot');
+  src: url('https://f9ir.github.io/acc/acc/font/JF-Flat-regular.eot?#iefix') format('embedded-opentype'), url('https://f9ir.github.io/acc/acc/font/JF-Flat-regular.svg#JF Flat Regular') format('svg'), url('https://f9ir.github.io/acc/acc/font/JF-Flat-regular.woff') format('woff'), url('https://f9ir.github.io/acc/acc/font/JF-Flat-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background: #f6704b;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.accordion {
+  margin-top: 0px;
+  position: relative;
+
+  right: 0;
+  margin-right:0;
+  width: 600px;
+  min-width: 300px;
+  background: #ccc;
+  cursor: pointer;
+  display: inline-block;
+  height: auto;
+}
+.accordion .item {
+  height: 100px;
+  width: ;
+}
+.accordion .item h3 {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  padding-left: 50px;
+  font-family: "JF Flat Regular";
+  font-size: 20px;
+  font-weight: 400;
+}
+.accordion .item img {
+  padding-left: 15px;
+  width: 30px;
+  vertical-align: middle;
+}
+
+.accordion .item.active {
+  background: #f6704b; /* Set the background color for the active item */
+}
+
+.accordion p.active {
+  display: block; /* Show the paragraph content for the active item */
+}
+
+.accordion .item h3:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.accordion .item:first-of-type {
+  background: #620808;
+  color: #f4ce74;
+}
+.accordion .item:nth-of-type(2) {
+  background: #a53f3f;
+  color: #ffe9c1;
+}
+.accordion .item:nth-of-type(3) {
+  background: #f4ce74;
+  color: #620808;
+}
+.accordion .item:nth-of-type(4) {
+  background: #ffe9c1;
+  color: #d5441c;
+}
+.accordion .item:last-of-type {
+  background: #d5441c;
+  color: #ffe9c1;
+}
+.accordion p {
+  font-family: "JF Flat Regular";
+  font-size: 18px;
+  font-weight: 400;
+  padding: 15px;
+  display: none;
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+.accordion p:first-of-type {
+  background: #620808;
+  color: #f4ce74;
+}
+.accordion p:nth-of-type(2) {
+  background: #a53f3f;
+  color: #ffe9c1;
+}
+.accordion p:nth-of-type(3) {
+  background: #f4ce74;
+  color: #620808;
+}
+.accordion p:nth-of-type(4) {
+  background: #ffe9c1;
+  color: #d5441c;
+}
+.accordion p:last-of-type {
+  background: #d5441c;
+  color: #ffe9c1;
+}
+
+html, body {
+height: 100%;
+}
+
+body {
+display: grid;
+place-items: center;
+font: 400 100%/1 "Gloock", serif;
+}
+
+.menu__item {
+color: #2C3A47;
+padding: 7.5rem 5rem;
+background: #BDC581;
+overflow: hidden;
+}
+.menu__item:nth-child(2) {
+background: #F8EFBA;
+}
+.menu__item:nth-child(3) {
+background: #FEA47F;
+}
+.menu__item:nth-child(even) .menu__link-image {
+animation-direction: reverse;
+}
+.menu__link {
+color: currentColor;
+position: relative;
+text-decoration: none;
+position: relative;
+text-align: center;
+display: block;
+}
+.menu__link-text {
+display: block;
+font-size: 11.5vmax;
+}
+.menu__link-text--solid {
+position: relative;
+z-index: 1;
+}
+.menu__link-text--outline {
+position: absolute;
+top: 0;
+width: 100%;
+height: 100%;
+left: 0;
+z-index: 3;
+-webkit-text-stroke: 2px #2C3A47;
+-webkit-text-fill-color: transparent;
+}
+.menu__link-image {
+position: absolute;
+z-index: 2;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+opacity: 0;
+transition: opacity 0.1s cubic-bezier(0.5, 0, 0.75, 0);
+width: 35%;
+height: auto;
+filter: grayscale(35%) brightness(130%) saturate(65%) contrast(65%);
+-webkit-animation: floatAndBob 30s infinite normal linear both paused;
+        animation: floatAndBob 30s infinite normal linear both paused;
+}
+.menu__link:hover .menu__link-image {
+opacity: 1;
+transition: opacity 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+-webkit-animation-play-state: running;
+        animation-play-state: running;
+}
+
+@-webkit-keyframes floatAndBob {
+0% {
+  transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+25% {
+  transform: translate(-25%, -75%) scale(0.85) rotate(5deg);
+}
+50% {
+  transform: translate(-75%, -50%) scale(1) rotate(0deg);
+}
+75% {
+  transform: translate(-25%, -25%) scale(1.15) rotate(-5deg);
+}
+100% {
+  transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+}
+
+@keyframes floatAndBob {
+0% {
+  transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+25% {
+  transform: translate(-25%, -75%) scale(0.85) rotate(5deg);
+}
+50% {
+  transform: translate(-75%, -50%) scale(1) rotate(0deg);
+}
+75% {
+  transform: translate(-25%, -25%) scale(1.15) rotate(-5deg);
+}
+100% {
+  transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+}
+
+
+.text-beside-accordion{
+display: inline-block;
+font-family: 'Cute Font';
+width: 400px;
+color: #ffe9c1;
+position: relative;
+top: 0;
+}
+
+.text-beside-accordion h3{
+font-size:80px;
+position: relative;
+margin-top: 0;
+font-weight: bold
+}
+
+.text-beside-accordion p{
+ font-size:40px;
+position: relative;
+margin-top: 0;
+top: 0px;
+
+}
+
+
+
+.text-beside-accordion h4{
+  font-size:65px;
+  position: relative;
+  margin-top: 20px;
+  top: 80px;
+  right: 180px;
+  font-weight: bold
+  }
+
+:root {
+  --accent: #c7ecee;
+  --accentComplimentary: #7ed6df;
+}
+* {
+  box-sizing: border-box;
+}
+.cards {
+  font: 400 100% 'Nunito', serif;
+  background-color: #f7f1e3;
+  color: #2f3640;
+  width:100%
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  gap: 35px;
+  padding: 60px 35px;
+  justify-content: center;
+}
+.card {
+  border-radius: 35px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 500px;
+}
+.card__top {
+  position: relative;
+  background-color: var(--accentComplimentary);
+  padding: 35px 35px 70px 35px;
+  z-index: 0;
+  display: flex;
+  align-items: flex-start;
+}
+.card__top:has(.card__figure) {
+  aspect-ratio: 1.5;
+}
+.card__bottom {
+  position: relative;
+  margin-top: -35px;
+  background-color: var(--accent);
+  padding: 35px;
+  border-radius: 35px;
+  display: flex;
+  gap: 60px;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  z-index: 1;
+}
+.card__figure {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: lighten;
+  opacity: 0.5;
+}
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card__tag {
+  padding: 10px 20px;
+  border: 1px solid currentColor;
+  border-radius: 2em;
+  position: relative;
+  z-index: 1;
+}
+.card__title {
+  font-size: 2.5rem;
+}
+.card__text {
+  font-size: 1.25rem;
+}
+.card--reverse {
+  flex-direction: column-reverse;
+}
+.card--reverse .card__bottom {
+  margin-top: 0;
+  margin-bottom: -35px;
+}
+.card--reverse .card__top {
+  position: relative;
+  padding: 70px 35px 35px 35px;
+  align-items: flex-end;
+}
+.card--primary {
+  --accent: #ffbe76;
+  --accentComplimentary: #706fd3;
+}
+.card--secondary {
+  --accent: #63cdda;
+  --accentComplimentary: #f5cd79;
+}
+.card--tertiary {
+  --accent: #888df1;
+  --accentComplimentary: #ff9ff3;
+}
+
+.div-cards{
+  width: 100%;
+}
+
+.accordion-div, .text-beside-accordion-div{
+  max-width: 600px;
+  display: inline-block;
+  height: 600px;
+  max-height: 600px;
+  overflow: hidden;
+}
+
