@@ -357,12 +357,26 @@ top: 0px;
   width: 100%;
 }
 
-.accordion-div, .text-beside-accordion-div{
+.accordion-div, .text-beside-accordion-div {
   max-width: 600px;
   display: inline-block;
-  height: 600px;
+  height: auto;
   max-height: 600px;
   overflow: hidden;
-  wdith:80%
+  width: 100%;
 }
 
+@media (max-width: 768px) {
+  .accordion-div, .text-beside-accordion-div {
+    display: block;
+    width: 100%; /* Reset width for stacked layout on smaller screens */
+    max-width: none; /* Remove max-width for full width on smaller screens */
+    height: auto; /* Allow content to determine height */
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row; /* Horizontal alignment by default */
+  justify-content: space-between;
+}
